@@ -39,33 +39,16 @@ function App() {
       <div className="flex min-h-screen flex-col bg-background">
         <Header />
 
-        {/* Responsive container: single column on mobile/tablet, two-column sidebar layout on xl+ */}
-        <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-8 xl:px-8">
+        <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-8 md:px-8">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-[300px_1fr] md:gap-8 md:items-start">
 
-          {/* ── Mobile / tablet: stacked ─────────────────────────────── */}
-          <div className="xl:hidden max-w-3xl space-y-6">
-            <Intro />
-            <ImageQualitySlider value={value} onImageQualityChange={onImageQualityChange} />
-            <div className="app-card p-5" ref={resultsRef}>
-              <DropZone onFilesSelected={handleImageUpload} hasCompressedImages={compressedImages.length > 0} />
-              <ActionButtons zipFile={zipFile} onReset={resetCompression} hasCompressedImages={compressedImages.length > 0} hasFileList={filelist.length > 0} />
-              {loading
-                ? <div className="mt-4"><LoadingSpinner compressProgress={compressProgress} /></div>
-                : <CompressedImagesGrid compressedImages={compressedImages} />
-              }
-            </div>
-          </div>
-
-          {/* ── Large screen: sidebar layout ─────────────────────────── */}
-          <div className="hidden xl:grid xl:grid-cols-[320px_1fr] xl:gap-8 xl:items-start">
-
-            {/* Left sidebar — intro + quality control (sticky) */}
-            <aside className="sticky top-20 space-y-5">
+            {/* Sidebar — intro + quality control */}
+            <aside className="md:sticky md:top-20 space-y-5">
               <Intro />
               <ImageQualitySlider value={value} onImageQualityChange={onImageQualityChange} />
             </aside>
 
-            {/* Right — upload workspace + results */}
+            {/* Main — upload workspace + results */}
             <div className="space-y-4" ref={resultsRef}>
               <div className="app-card p-5">
                 <DropZone onFilesSelected={handleImageUpload} hasCompressedImages={compressedImages.length > 0} />
