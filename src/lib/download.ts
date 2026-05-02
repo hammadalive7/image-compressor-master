@@ -14,8 +14,7 @@ export const downloadZip = async (zipFile: Blob | null) => {
     downloadLink.click();
     document.body.removeChild(downloadLink);
     toast.success("ZIP downloaded successfully!");
-  } catch (err) {
-    console.error(err);
+  } catch {
     toast.error("Failed to download ZIP.");
   }
 };
@@ -38,8 +37,7 @@ export const downloadSingleImage = async (file: string, fileName?: string) => {
     downloadLink.click();
     document.body.removeChild(downloadLink);
     toast.success("Image downloaded successfully!");
-  } catch (err) {
-    console.error(err);
+  } catch {
     toast.error("Failed to download image.");
   }
 };

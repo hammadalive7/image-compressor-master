@@ -1,6 +1,7 @@
 import { filterValidFiles, processImages } from "@/lib";
 import { useCallback, useEffect, useState } from "react";
 import type { CompressedImage } from "@/lib";
+import { toast } from "sonner";
 
 export const useImageCompression = () => {
   const [compressedImages, setCompressedImages] = useState<CompressedImage[]>(
@@ -21,8 +22,8 @@ export const useImageCompression = () => {
 
         setCompressedImages(newCompressedImages);
         setZipFile(newZipFile);
-      } catch (error) {
-        console.error("Error processing images:", error);
+      } catch {
+        toast.error("Failed to compress images. Please try again.");
       } finally {
         setLoading(false);
       }

@@ -50,11 +50,20 @@ export const processImages = async (
     });
 
     const compressedImg = await compressImage(file, quality);
-    const base64Data = (compressedImg as string).split(",")[1];
-    const binaryData = atob(base64Data);
-    const compressedImageSize = binaryData.length;
+    const dataUrlParts = (compressedImg as string).split(",");
+    if (dataUrlParts.length < 2 || !dataUrlParts[1]) {
+      throw new Error(`Invalid compressed output for file: ${file.name}`);
+    }
+    let compressedImageSize: number;
+    try {
+      const binaryData = atob(dataUrlParts[1]);
+      compressedImageSize = binaryData.length;
+    } catch {
+      throw new Error(`Failed to decode compressed image for file: ${file.name}`);
+    }
     const dotIndex = file.name.lastIndexOf(".");
-    const baseName = dotIndex !== -1 ? file.name.slice(0, dotIndex) : file.name;
+    const rawBaseName = dotIndex !== -1 ? file.name.slice(0, dotIndex) : file.name;
+    const baseName = rawBaseName.replace(/[^a-zA-Z0-9_\-. ]/g, "_").replace(/\.{2,}/g, "_");
     const originalExt = dotIndex !== -1 ? file.name.slice(dotIndex) : "";
     const outputExt = originalExt;
 

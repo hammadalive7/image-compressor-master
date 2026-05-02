@@ -6,7 +6,7 @@ const Intro = () => {
         <span style={{ color: "var(--primary)" }}>Image Compressor</span>
       </h1>
       <p className="mt-1.5 text-sm text-muted-foreground">
-        Compress JPG, PNG &amp; WebP locally — no uploads, no account, unlimited files.
+        Compress JPG, PNG &amp; WebP locally — no uploads, no account, unlimited files. Images stay on your device.
       </p>
 
       <div className="mt-4 flex flex-wrap gap-2">
