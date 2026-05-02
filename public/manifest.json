@@ -1,0 +1,39 @@
+{
+  "short_name": "IMGZIP",
+  "name": "IMGZIP — Compress Images to Minimum Size",
+  "icons": [
+    {
+      "src": "logo180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "logo48.svg",
+      "sizes": "48x48",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "logo192.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    },
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff"
+}
