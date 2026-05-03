@@ -1,6 +1,5 @@
 import { downloadSingleImage, type CompressedImage } from "@/lib";
 import { Inbox } from "lucide-react";
-import { PhotoProvider } from "react-photo-view";
 import ImagePreviewCard from "./image-preview-card";
 
 interface CompressedImagesGridProps {
@@ -46,22 +45,20 @@ const CompressedImagesGrid = ({ compressedImages }: CompressedImagesGridProps) =
       </div>
 
       {/* Grid */}
-      <PhotoProvider>
-        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
-          {compressedImages.map((image, i) => (
-            <div
-              key={`${image.fileName}-${i}`}
-              className="animate-popIn"
-              style={{ animationDelay: `${Math.min(i * 35, 250)}ms` }}
-            >
-              <ImagePreviewCard
-                onSingleFileDownload={downloadSingleImage}
-                {...image}
-              />
-            </div>
-          ))}
-        </div>
-      </PhotoProvider>
+      <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
+        {compressedImages.map((image, i) => (
+          <div
+            key={`${image.fileName}-${i}`}
+            className="animate-popIn"
+            style={{ animationDelay: `${Math.min(i * 35, 250)}ms` }}
+          >
+            <ImagePreviewCard
+              onSingleFileDownload={downloadSingleImage}
+              {...image}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
