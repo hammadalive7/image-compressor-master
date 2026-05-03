@@ -94,8 +94,13 @@ export const processImages = async (
       compressionPercentage: rate.toFixed(2),
     });
 
-    const response = await fetch(finalContent);
-    const blob = await response.blob();
+    const [meta, b64] = finalContent.split(",");
+    const mimeMatch = meta.match(/:(.*?);/);
+    const mime = mimeMatch ? mimeMatch[1] : "application/octet-stream";
+    const binary = atob(b64);
+    const bytes = new Uint8Array(binary.length);
+    for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+    const blob = new Blob([bytes], { type: mime });
     img?.file(`${baseName}-compressed${outputExt}`, blob);
     counter = counter - 1;
 
