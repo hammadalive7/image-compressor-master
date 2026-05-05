@@ -45,7 +45,7 @@ const Footer = () => {
           </span>
           <div className="flex items-center gap-3">
             <span className="text-[10px] uppercase tracking-widest text-muted-foreground">MIT License</span>
-            <span className="app-chip app-chip-primary">Privacy First</span>
+            <span className="app-chip app-chip-primary">Middle-Out™</span>
           </div>
         </div>
       </div>

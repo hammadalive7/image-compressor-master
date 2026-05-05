@@ -63,10 +63,10 @@ const DropZone = ({ onFilesSelected, hasCompressedImages }: DropZoneProps) => {
 
         <div>
           <p className="text-sm font-medium text-foreground">
-            {isDragActive ? "Drop files to compress" : "Drop images here"}
+            {isDragActive ? "Drop files for Middle-Out™ compression" : "Drop images here"}
           </p>
           <p className="mt-0.5 text-xs text-muted-foreground">
-            or <span style={{ color: "var(--primary)" }} className="font-medium">click to browse</span>
+            or <span style={{ color: "var(--primary)" }} className="font-medium">click to browse</span> — Pied Piper compresses locally
           </p>
         </div>
 

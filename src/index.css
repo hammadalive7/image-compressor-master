@@ -51,42 +51,42 @@ body::-webkit-scrollbar { display: none; }
 
 /* ─── Design tokens — Light ──────────────────────────────── */
 :root {
-  /* Refire palette */
-  --c-900: #003135;
-  --c-800: #024950;
-  --c-500: #0FA4AF;
-  --c-200: #AFDDE5;
-  --c-copper: #964734;
+  /* Pied Piper palette — silicon valley green */
+  --c-900: #0d3b1a;
+  --c-800: #155724;
+  --c-500: #28a745;
+  --c-200: #b8f0c8;
+  --c-copper: #6c4a00;
 
-  --background:           #F4F7F8;
+  --background:           #F2F8F4;
   --surface:              #FFFFFF;
   --surface-raised:       #FFFFFF;
-  --surface-sunken:       #E8F2F4;
-  --foreground:           #0A2123;
-  --foreground-muted:     #3D6468;
-  --foreground-subtle:    #6E9498;
-  --primary:              #0A949F;
-  --primary-hover:        #088089;
-  --primary-active:       #066C74;
+  --surface-sunken:       #E2F0E8;
+  --foreground:           #0d2b14;
+  --foreground-muted:     #2e5c3a;
+  --foreground-subtle:    #5a8a66;
+  --primary:              #1e8a38;
+  --primary-hover:        #187a30;
+  --primary-active:       #126a28;
   --primary-foreground:   #FFFFFF;
-  --primary-subtle:       #D8F0F2;
+  --primary-subtle:       #d4edda;
   --destructive:          #7D3320;
   --destructive-subtle:   #FCEEE9;
   --destructive-foreground: #FFFFFF;
-  --success:              #0A949F;
-  --success-subtle:       #D8F0F2;
+  --success:              #1e8a38;
+  --success-subtle:       #d4edda;
   --warning:              #7D3320;
-  --border:               #C8DDE0;
-  --border-strong:        #96BABF;
-  --ring:                 #0FA4AF;
+  --border:               #b8dfc4;
+  --border-strong:        #7cba90;
+  --ring:                 #28a745;
   --radius:               10px;
 
   /* Flat shadow system */
-  --shadow-xs: 0 1px 2px rgba(2,73,80,0.06);
-  --shadow-sm: 0 1px 3px rgba(2,73,80,0.08), 0 1px 2px rgba(2,73,80,0.04);
-  --shadow-md: 0 4px 6px rgba(2,73,80,0.07), 0 2px 4px rgba(2,73,80,0.04);
-  --shadow-lg: 0 10px 15px rgba(2,73,80,0.08), 0 4px 6px rgba(2,73,80,0.04);
-  --shadow-focus: 0 0 0 3px rgba(15,164,175,0.20);
+  --shadow-xs: 0 1px 2px rgba(13,59,26,0.06);
+  --shadow-sm: 0 1px 3px rgba(13,59,26,0.08), 0 1px 2px rgba(13,59,26,0.04);
+  --shadow-md: 0 4px 6px rgba(13,59,26,0.07), 0 2px 4px rgba(13,59,26,0.04);
+  --shadow-lg: 0 10px 15px rgba(13,59,26,0.08), 0 4px 6px rgba(13,59,26,0.04);
+  --shadow-focus: 0 0 0 3px rgba(40,167,69,0.22);
 
   /* Semantic aliases for Tailwind */
   --card:              var(--surface);
@@ -104,34 +104,34 @@ body::-webkit-scrollbar { display: none; }
   --font-serif: "Cascadia Code", "SF Mono", Monaco, Consolas, "Courier New", monospace;
 }
 
-/* ─── Dark mode — gray/black palette ────────────────────── */
+/* ─── Dark mode — Pied Piper dark green ────────────────── */
 .dark {
-  --background:           #0F1117;
-  --surface:              #1A1D27;
-  --surface-raised:       #22263A;
-  --surface-sunken:       #0A0C12;
-  --foreground:           #F0F2F8;
-  --foreground-muted:     #9BA3C2;
-  --foreground-subtle:    #5C647F;
-  --primary:              #14B8C4;
-  --primary-hover:        #18CCD9;
-  --primary-active:       #0FA4AF;
-  --primary-foreground:   #04262B;
-  --primary-subtle:       #0F2D34;
+  --background:           #0a0f0c;
+  --surface:              #111a14;
+  --surface-raised:       #192a1e;
+  --surface-sunken:       #060d08;
+  --foreground:           #e8f5ec;
+  --foreground-muted:     #7dba90;
+  --foreground-subtle:    #4a7a58;
+  --primary:              #34d058;
+  --primary-hover:        #3ddc62;
+  --primary-active:       #28a745;
+  --primary-foreground:   #051409;
+  --primary-subtle:       #0d2b14;
   --destructive:          #E06B50;
   --destructive-subtle:   #2A1510;
   --destructive-foreground: #FFFFFF;
-  --success:              #14B8C4;
-  --success-subtle:       #0F2D34;
+  --success:              #34d058;
+  --success-subtle:       #0d2b14;
   --warning:              #E06B50;
-  --border:               #2A2F45;
-  --border-strong:        #3A4060;
-  --ring:                 #14B8C4;
+  --border:               #1e3b26;
+  --border-strong:        #2e5c3a;
+  --ring:                 #34d058;
   --shadow-xs: 0 1px 2px rgba(0,0,0,0.40);
   --shadow-sm: 0 1px 3px rgba(0,0,0,0.50), 0 1px 2px rgba(0,0,0,0.30);
   --shadow-md: 0 4px 6px rgba(0,0,0,0.50), 0 2px 4px rgba(0,0,0,0.30);
   --shadow-lg: 0 10px 15px rgba(0,0,0,0.55), 0 4px 6px rgba(0,0,0,0.30);
-  --shadow-focus: 0 0 0 3px rgba(20,184,196,0.30);
+  --shadow-focus: 0 0 0 3px rgba(52,208,88,0.28);
 
   --card:              var(--surface);
   --card-foreground:   var(--foreground);

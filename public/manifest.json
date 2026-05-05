@@ -1,6 +1,6 @@
 {
-  "short_name": "IMGZIP",
-  "name": "IMGZIP — Compress Images to Minimum Size",
+  "short_name": "Pied Piper",
+  "name": "Pied Piper — Middle-Out Image Compressor",
   "icons": [
     {
       "src": "logo180.png",
