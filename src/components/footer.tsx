@@ -11,28 +11,36 @@ const Footer = () => {
         {/* Stats strip */}
         <div className="mb-5 grid grid-cols-3 divide-x divide-border rounded-lg border border-border overflow-hidden">
           {[
-            { value: "100%", label: "Private" },
-            { value: "3",    label: "Formats" },
-            { value: "∞",    label: "Files"   },
+            { value: "100%", label: "Private",  sub: "Not Hooli"      },
+            { value: "3",    label: "Formats",  sub: "Dinesh counted" },
+            { value: "∞",    label: "Files",    sub: "even Big Head's"},
           ].map((stat) => (
-            <div key={stat.label} className="flex flex-col items-center py-3 px-4 bg-surface-sunken">
+            <div key={stat.label} className="flex flex-col items-center py-3 px-2 bg-surface-sunken">
               <span
                 className="text-xl font-semibold tabular-nums leading-none"
                 style={{ color: "var(--primary)" }}
               >
                 {stat.value}
               </span>
-              <span className="mt-1 text-[10px] font-medium uppercase tracking-widest text-muted-foreground">
+              <span className="mt-1 text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
                 {stat.label}
+              </span>
+              <span className="text-[9px] text-muted-foreground/60 italic">
+                {stat.sub}
               </span>
             </div>
           ))}
         </div>
 
+        {/* Quote */}
+        <p className="mb-4 text-center text-[11px] italic text-muted-foreground">
+          "Unlike Hooli, we don't need your data. We just need your images — briefly." — Gilfoyle, probably
+        </p>
+
         {/* Bottom row */}
         <div className="flex flex-col items-start justify-between gap-2 sm:flex-row sm:items-center">
           <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
-            Built with <ClaudeLogo /> by{" "}
+            Compressed with <ClaudeLogo /> by{" "}
             <a
               href="https://github.com/hammadalive7"
               target="_blank"
@@ -42,9 +50,10 @@ const Footer = () => {
             >
               Hammad
             </a>
+            <span className="hidden sm:inline text-muted-foreground/50">· Erlich gets no credit</span>
           </span>
           <div className="flex items-center gap-3">
-            <span className="text-[10px] uppercase tracking-widest text-muted-foreground">MIT License</span>
+            <span className="hidden sm:inline text-[10px] uppercase tracking-widest text-muted-foreground">Open Source — unlike Hooli</span>
             <span className="app-chip app-chip-primary">Middle-Out™</span>
           </div>
         </div>

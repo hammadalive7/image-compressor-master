@@ -13,9 +13,9 @@ const CompressedImagesGrid = ({ compressedImages }: CompressedImagesGridProps) =
         <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-xl border border-border bg-surface-sunken">
           <Inbox className="size-5 text-muted-foreground" strokeWidth={1.5} />
         </div>
-        <p className="text-sm font-medium text-muted-foreground">No results yet</p>
-        <p className="mt-0.5 max-w-[200px] text-xs text-muted-foreground">
-          Upload images to see compressed output here.
+        <p className="text-sm font-medium text-muted-foreground">Nothing compressed yet</p>
+        <p className="mt-0.5 max-w-[220px] text-xs text-muted-foreground">
+          Drop some images up there. Even Dinesh figured it out on his first try.
         </p>
       </div>
     );
@@ -39,7 +39,7 @@ const CompressedImagesGrid = ({ compressedImages }: CompressedImagesGridProps) =
             <path d="M3 8l3.5 3.5L13 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
           <span className="text-xs font-medium" style={{ color: "var(--primary)" }}>
-            {savedPct}% saved across {compressedImages.length} file{compressedImages.length !== 1 ? "s" : ""}
+            {savedPct}% crushed across {compressedImages.length} file{compressedImages.length !== 1 ? "s" : ""} — Gavin Belson is seething.
           </span>
         </div>
       </div>
