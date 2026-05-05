@@ -7,7 +7,7 @@ import { createPortal } from "react-dom";
 // Industry-standard before/after slider
 // Both images are full-size and absolutely stacked.
 // The "before" (original) image is clipped with clipPath so it perfectly
-// aligns with the "after" image — no sizing hacks needed.
+// aligns with the "after" image - no sizing hacks needed.
 // ---------------------------------------------------------------------------
 const BeforeAfterSlider = ({
   original,

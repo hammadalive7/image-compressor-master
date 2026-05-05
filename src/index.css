@@ -51,42 +51,42 @@ body::-webkit-scrollbar { display: none; }
 
 /* ─── Design tokens — Light ──────────────────────────────── */
 :root {
-  /* Pied Piper palette — silicon valley green */
-  --c-900: #0d3b1a;
-  --c-800: #155724;
-  --c-500: #28a745;
-  --c-200: #b8f0c8;
-  --c-copper: #6c4a00;
+  /* Pied Piper palette — teal/cyan-green matching the app UI */
+  --c-900: #023d30;
+  --c-800: #047863;
+  --c-500: #06a261;
+  --c-200: #b2efe0;
+  --c-copper: #5a4200;
 
-  --background:           #F2F8F4;
+  --background:           #f6f8fa;
   --surface:              #FFFFFF;
   --surface-raised:       #FFFFFF;
-  --surface-sunken:       #E2F0E8;
-  --foreground:           #0d2b14;
-  --foreground-muted:     #2e5c3a;
-  --foreground-subtle:    #5a8a66;
-  --primary:              #1e8a38;
-  --primary-hover:        #187a30;
-  --primary-active:       #126a28;
+  --surface-sunken:       #eef1f4;
+  --foreground:           #1a1f2e;
+  --foreground-muted:     #4a5568;
+  --foreground-subtle:    #718096;
+  --primary:              #06a261;
+  --primary-hover:        #058f56;
+  --primary-active:       #047863;
   --primary-foreground:   #FFFFFF;
-  --primary-subtle:       #d4edda;
-  --destructive:          #7D3320;
-  --destructive-subtle:   #FCEEE9;
+  --primary-subtle:       #dcfce9;
+  --destructive:          #cf222e;
+  --destructive-subtle:   #FFEBE9;
   --destructive-foreground: #FFFFFF;
-  --success:              #1e8a38;
-  --success-subtle:       #d4edda;
-  --warning:              #7D3320;
-  --border:               #b8dfc4;
-  --border-strong:        #7cba90;
-  --ring:                 #28a745;
+  --success:              #06a261;
+  --success-subtle:       #dcfce9;
+  --warning:              #cf222e;
+  --border:               #d0d7de;
+  --border-strong:        #a8b0bc;
+  --ring:                 #06a261;
   --radius:               10px;
 
   /* Flat shadow system */
-  --shadow-xs: 0 1px 2px rgba(13,59,26,0.06);
-  --shadow-sm: 0 1px 3px rgba(13,59,26,0.08), 0 1px 2px rgba(13,59,26,0.04);
-  --shadow-md: 0 4px 6px rgba(13,59,26,0.07), 0 2px 4px rgba(13,59,26,0.04);
-  --shadow-lg: 0 10px 15px rgba(13,59,26,0.08), 0 4px 6px rgba(13,59,26,0.04);
-  --shadow-focus: 0 0 0 3px rgba(40,167,69,0.22);
+  --shadow-xs: 0 1px 2px rgba(26,31,46,0.06);
+  --shadow-sm: 0 1px 3px rgba(26,31,46,0.08), 0 1px 2px rgba(26,31,46,0.04);
+  --shadow-md: 0 4px 6px rgba(26,31,46,0.07), 0 2px 4px rgba(26,31,46,0.04);
+  --shadow-lg: 0 10px 15px rgba(26,31,46,0.08), 0 4px 6px rgba(26,31,46,0.04);
+  --shadow-focus: 0 0 0 3px rgba(6,162,97,0.25);
 
   /* Semantic aliases for Tailwind */
   --card:              var(--surface);
@@ -104,34 +104,34 @@ body::-webkit-scrollbar { display: none; }
   --font-serif: "Cascadia Code", "SF Mono", Monaco, Consolas, "Courier New", monospace;
 }
 
-/* ─── Dark mode — Pied Piper dark green ────────────────── */
+/* ─── Dark mode — Pied Piper dark teal ──────────────────── */
 .dark {
-  --background:           #0a0f0c;
-  --surface:              #111a14;
-  --surface-raised:       #192a1e;
-  --surface-sunken:       #060d08;
-  --foreground:           #e8f5ec;
-  --foreground-muted:     #7dba90;
-  --foreground-subtle:    #4a7a58;
-  --primary:              #34d058;
-  --primary-hover:        #3ddc62;
-  --primary-active:       #28a745;
-  --primary-foreground:   #051409;
-  --primary-subtle:       #0d2b14;
+  --background:           #0d1117;
+  --surface:              #161b22;
+  --surface-raised:       #21262d;
+  --surface-sunken:       #090d12;
+  --foreground:           #e6edf3;
+  --foreground-muted:     #8b949e;
+  --foreground-subtle:    #6e7681;
+  --primary:              #0fd688;
+  --primary-hover:        #13e694;
+  --primary-active:       #06a261;
+  --primary-foreground:   #020f0b;
+  --primary-subtle:       #0a2e22;
   --destructive:          #E06B50;
   --destructive-subtle:   #2A1510;
   --destructive-foreground: #FFFFFF;
-  --success:              #34d058;
-  --success-subtle:       #0d2b14;
+  --success:              #0fd688;
+  --success-subtle:       #0a2e22;
   --warning:              #E06B50;
-  --border:               #1e3b26;
-  --border-strong:        #2e5c3a;
-  --ring:                 #34d058;
+  --border:               #30363d;
+  --border-strong:        #484f58;
+  --ring:                 #0fd688;
   --shadow-xs: 0 1px 2px rgba(0,0,0,0.40);
   --shadow-sm: 0 1px 3px rgba(0,0,0,0.50), 0 1px 2px rgba(0,0,0,0.30);
   --shadow-md: 0 4px 6px rgba(0,0,0,0.50), 0 2px 4px rgba(0,0,0,0.30);
   --shadow-lg: 0 10px 15px rgba(0,0,0,0.55), 0 4px 6px rgba(0,0,0,0.30);
-  --shadow-focus: 0 0 0 3px rgba(52,208,88,0.28);
+  --shadow-focus: 0 0 0 3px rgba(15,214,136,0.28);
 
   --card:              var(--surface);
   --card-foreground:   var(--foreground);

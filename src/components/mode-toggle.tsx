@@ -8,7 +8,7 @@ export function ThemeToggle() {
   return (
     <button
       onClick={toggle}
-      className="app-btn-icon"
+      className="inline-flex items-center justify-center w-[34px] h-[34px] rounded-lg border border-white/25 bg-white/10 text-white cursor-pointer transition-colors hover:bg-white/20 hover:border-white/40"
       aria-label="Toggle theme"
     >
       <Sun className="size-[15px] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />

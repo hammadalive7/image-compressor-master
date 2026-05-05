@@ -31,7 +31,7 @@ const LoadingSpinner = ({ compressProgress }: { compressProgress: number }) => {
               animation: "spin 0.75s linear infinite",
             }}
           />
-          Processing locally — nothing leaves your device
+          Processing locally - nothing leaves your device
         </p>
       )}
     </div>
